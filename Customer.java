@@ -16,5 +16,8 @@ class Customer
     {
     }
 
+public void helllo()
+{}
+
         
 }
