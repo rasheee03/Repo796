@@ -11,6 +11,10 @@ class Customer
         return custName;
     }
         
+    
+    public void showCust()
+    {
+    }
 
         
 }
