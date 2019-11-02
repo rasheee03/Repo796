@@ -5,6 +5,11 @@ class Customer
     
     public void getId()
     {}
+    
+    public String getCustName
+    {
+        return custName;
+    }
         
 
         
