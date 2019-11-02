@@ -8,6 +8,9 @@ class Customer
         
     public void setId()
     {}
+    
+    public void getCust()
+    {}
 
         
 }
