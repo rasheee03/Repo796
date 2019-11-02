@@ -19,5 +19,9 @@ class Customer
 public void helllo()
 {}
 
+@override
+public String To string()
+{
+}
         
 }
