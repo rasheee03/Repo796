@@ -6,6 +6,8 @@ class Customer
     public void getId()
     {}
         
+    public void setId()
+    {}
 
         
 }
