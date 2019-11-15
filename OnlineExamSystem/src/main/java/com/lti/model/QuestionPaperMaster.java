@@ -2,6 +2,7 @@ package com.lti.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -10,7 +11,7 @@ public class QuestionPaperMaster {
 	
 	private int qpmid;
 	
-	@Column(name="cid")
+	@JoinColumn(name = "cid", nullable = false)
 	private Course course;
 
 }

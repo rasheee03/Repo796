@@ -1,6 +1,7 @@
 package com.lti.model;
 
 import java.time.LocalDate;
+import java.time.Year;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -23,7 +24,7 @@ public class Registration {
 	private String password;
 	private int mobile;
 	private String qualification;
-	private String year_of_completion;
+	private Year year_of_completion;
 	private LocalDate dateOfBirth;
 	private String city;
 	private String state;
@@ -82,10 +83,14 @@ public class Registration {
 	public void setQualification(String qualification) {
 		this.qualification = qualification;
 	}
-	public String getYear_of_completion() {
+	
+	
+
+	
+	public Year getYear_of_completion() {
 		return year_of_completion;
 	}
-	public void setYear_of_completion(String year_of_completion) {
+	public void setYear_of_completion(Year year_of_completion) {
 		this.year_of_completion = year_of_completion;
 	}
 	public LocalDate getDateOfBirth() {

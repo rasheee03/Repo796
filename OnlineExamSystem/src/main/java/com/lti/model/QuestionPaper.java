@@ -1,8 +1,11 @@
 package com.lti.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -12,7 +15,11 @@ public class QuestionPaper {
 	@Id
 	@GeneratedValue
 	private int qpid;
+	
+	
 	private ExamHistory examHistory;
+	
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private QuestionBank questionBank;
 	
 	public int getQpid() {

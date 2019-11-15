@@ -2,6 +2,7 @@ package com.lti.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -10,10 +11,10 @@ public class UserAnswer {
 	
 	private int uaid;
 	
-	@Column(name="qid")
+	@JoinColumn(name = "qid", nullable = false)
 	private QuestionBank questionBank;
 	
-	@Column(name="opid")
+	@JoinColumn(name = "opid", nullable = false)
 	private Options options;
 
 	public QuestionBank getQuestionBank() {

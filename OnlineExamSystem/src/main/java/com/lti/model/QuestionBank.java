@@ -1,9 +1,11 @@
 package com.lti.model;
 
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,7 +18,8 @@ public class QuestionBank {
 	private String question;
 	private int lvl;
 	
-	@Column(name="COURSE_ID")
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="cid")
 	private Course course;
 	
 	public int getQid() {

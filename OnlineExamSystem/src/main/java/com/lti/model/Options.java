@@ -1,17 +1,26 @@
 package com.lti.model;
 
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="Options")
 public class Options {
 	
+	@Id
+	@GeneratedValue
 	private int opid;
+	
+	private String value;
 	private boolean isCorrectAns;
 	
-	@Column(name="qid")
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name ="qid")
 	private QuestionBank questionBank;
 	
 	
