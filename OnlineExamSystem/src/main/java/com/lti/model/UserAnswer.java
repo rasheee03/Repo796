@@ -10,10 +10,11 @@ import javax.persistence.Table;
 public class UserAnswer {
 	
 	private int uaid;
-	
+	@OneToOne
 	@JoinColumn(name = "qid", nullable = false)
 	private QuestionBank questionBank;
 	
+	@OneToMany
 	@JoinColumn(name = "opid", nullable = false)
 	private Options options;
 
