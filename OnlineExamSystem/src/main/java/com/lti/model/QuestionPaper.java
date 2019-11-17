@@ -16,10 +16,12 @@ public class QuestionPaper {
 	@GeneratedValue
 	private int qpid;
 	
-	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="eid")
 	private ExamHistory examHistory;
 	
-	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name="qid")
 	private QuestionBank questionBank;
 	
 	public int getQpid() {
